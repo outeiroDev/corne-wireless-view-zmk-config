@@ -9,7 +9,14 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        gaming {
+            bindings = <&to 4>;
+            key-positions = <0 11>;
+        };
+    };
 
     behaviors {
         mo2kp: mo2kp {
@@ -98,6 +105,15 @@
             >;
 
             label = "function";
+        };
+
+        gaming {
+            bindings = <
+&kp ESC    &kp Q  &kp W  &kp E     &kp R      &kp T        &kp Y      &kp U      &kp UP     &kp O      &kp P     &kp BSPC
+&kp TAB    &kp A  &kp S  &kp D     &kp F      &kp G        &kp H      &kp LEFT   &kp DOWN   &kp RIGHT  &kp SEMI  &kp SQT
+&kp LSHFT  &kp Z  &kp X  &kp C     &kp V      &kp B        &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH  &to 0
+                         &kp LALT  &kp SPACE  &kp LCTRL    &kp RCTRL  &kp SPACE  &kp RALT
+            >;
         };
     };
 };
